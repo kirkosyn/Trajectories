@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectGuid>{3EF9F2F4-1BAF-EEA3-CC52-AD84E4C4041D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_16;UNITY_2018_2;UNITY_2018;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_EVENT_QUEUE;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>2018.2.16f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>F:\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>F:\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Plugins\CommonAssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Aruco\ArucoInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Aruco\DetectorParameters.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Aruco\Dictionary.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Aruco\GridBoard.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\BgSegm\BackgroundSubtractorCNT.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\BgSegm\BackgroundSubtractorGMG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\BgSegm\BackgroundSubtractorGSOC.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\BgSegm\BackgroundSubtractorLSBP.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\BgSegm\BackgroundSubtractorMOG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Bioinspired\BioinspiredInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Bioinspired\Retina.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Bioinspired\RetinaFastToneMapping.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\DnnModern\CaffeConverter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Dpm\DpmDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Dpm\DpmInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Dpm\ObjectDetection.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\BasicFaceRecognizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\BIF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\EigenFaceRecognizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FacemarkAAM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FacemarkAAMParams.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FacemarkLBF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FacemarkLBFParams.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FaceRecognizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\FisherFaceRecognizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\IFacemark.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\LBPHFaceRecognizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Face\MACE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Freetype\Freetype2.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Fuzzy\FuzzyInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Hfs\HfsInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Hfs\HfsSegment.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\AverageHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\BlockMeanHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\ColorMomentHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\ImgHashBase.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\ImgHashInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\MarrHildrethHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\PHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\ImgHash\RadialVarianceHash.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\LineDescriptor\BinaryDescriptor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\LineDescriptor\LSDDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\LineDescriptor\MKeyLine.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\PhaseUnwrapping\HistogramPhaseUnwrapping.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Plot\Plot2d.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Plot\Plot2d.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\IQualityBase.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\QualityBRISQUE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\QualityGMSD.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\QualityMSE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\QualityPSNR.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Quality\QualitySSIM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Saliency\MotionSaliencyBinWangApr2014.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Saliency\ObjectnessBING.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Saliency\Saliency.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Stereo\QuasiDenseStereo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Stereo\QuasiDenseStereo.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Text\ERFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Text\MCvERStat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Text\VectorOfERStat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Text\VectorOfVectorOfERStat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\MultiTracker.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\Tracker.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerBoosting.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerCSRT.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerGOTURN.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerKCF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerMedianFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerMIL.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerMOSSE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\Tracking\TrackerTLD.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\BoostDesc.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\BriefDescriptorExtractor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\CudaSURF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\DAISY.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\Freak.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\HarrisLaplaceFeatureDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\LATCH.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\LUCID.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\MSDDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\PCTComputeSignature.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\PCTSignatures.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\PCTSignaturesSQFD.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\SIFT.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\StarDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\SURF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XFeatures2D\VGG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\DisparityWLSFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\DTFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\DtFilterType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\EdgeBoxes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\FastLineDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\GraphSegmentation.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\IDisparityFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\LocalBinarizationMethods.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\RidgeDetectionFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\SelectiveSearchSegmentation.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\StructuredEdgeDetection.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\SuperpixelLSC.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\SuperpixelSEEDS.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\SuperpixelSLIC.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\ThinningTypes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\WMFWeightType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XImgproc\XImgprocInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XObjdetect\WBDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\GrayworldWB.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\GrayworldWB.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\LearningBasedWB.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\LearningBasedWB.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\SimpleWB.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\SimpleWB.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\TonemapDurand.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\TonemapDurand.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\WhiteBalancer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Contrib\XPhoto\XPhotoInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Bgsegm\CudaBackgroundSubtractorMOG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Bgsegm\CudaBackgroundSubtractorMOG2.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Codec\CudaVideoReader.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Codec\CudaVideoWriter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\CudaConvolution.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\CudaDeviceInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\CudaImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\CudaInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\CudaLookUpTable.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Features2d\CudaBruteForceMatcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Features2d\CudaFastFeatureDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Features2d\CudaORBDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Features2d\Feature2DAsync.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaBoxFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaBoxMaxFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaBoxMinFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaColumnSumFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaDerivFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaGaussianFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaLaplacianFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaLinearFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaMedianFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaMorphologyFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaRowSumFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaScharrFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaSeparableLinearFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Filters\CudaSobelFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\GpuMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\GpuMat.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaCannyEdgeDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaClahe.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaCornernessCriteria.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaGoodFeaturesToTrackDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaHarrisCorner.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaHoughCirclesDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaHoughLinesDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaHoughSegmentDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaMinEigenValCorner.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Imgproc\CudaTemplateMatching.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\InputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Legacy\CudaBackgroundSubtractorFGD.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Legacy\CudaBackgroundSubtractorGMG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Objdetect\CudaCascadeClassifier.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Objdetect\CudaCascadeClassifier.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Objdetect\CudaHOG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Objdetect\CudaHOG.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\CudaBroxOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\CudaDensePyrLKOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\CudaFarnebackOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\CudaOpticalFlowDualTvl1.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\CudaSparsePyrLKOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\ICudaDenseOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Optflow\ICudaSparseOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Stereo\CudaDisparityBilateralFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Stereo\CudaStereoBM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Stereo\CudaStereoConstantSpaceBP.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\Stream.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\TargetArchs.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Cuda\VectorOfGpuMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\BitmapVisualizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\DenseHistogramVisualizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\ImageVisualizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\MatNDVisualizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\MatrixVisualizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.DebuggerVisualizers\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\MainForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\MainForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\Properties\Resources.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Aruco\Properties\Settings.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\CameraCapture\CameraCapture.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\CameraCapture\CameraCapture.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\CameraCapture\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\CameraCapture\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FaceDetection\DetectFace.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FaceDetection\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FaceDetection\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Form1.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Form1.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Properties\Resources.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FacialMouseControl\Properties\Settings.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FeatureMatching\DrawMatches.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FeatureMatching\FeatureMatching.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\FeatureMatching\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\HelloWorld\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\HelloWorld\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\ImageDatabase.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\MainForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\MainForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\PersistentImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LatentSvmDetector\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LatentSvmDetector\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LicensePlateRecognition\LicensePlateDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LicensePlateRecognition\LicensePlateRecognitionForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LicensePlateRecognition\LicensePlateRecognitionForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LicensePlateRecognition\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\LicensePlateRecognition\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\MotionDetection\Form1.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\MotionDetection\Form1.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\MotionDetection\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\MotionDetection\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\OCR\OCRForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\OCR\OCRForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\OCR\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\OCR\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PedestrianDetection\FindPedestrian.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PedestrianDetection\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PedestrianDetection\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PlanarSubdivision\DrawSubdivision.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PlanarSubdivision\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\PlanarSubdivision\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\RealtimeCamera.UWP\App.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\RealtimeCamera.UWP\MainPage.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\RealtimeCamera.UWP\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ShapeDetection\MainForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ShapeDetection\MainForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ShapeDetection\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\ShapeDetection\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Simple3DReconstruction\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Simple3DReconstruction\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Stitching\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Stitching\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Stitching\StitchingMainForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Stitching\StitchingMainForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\MainForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\MainForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\Properties\Resources.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\Properties\Settings.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TFInterop\TensorConvert.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TrafficSignRecognition\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TrafficSignRecognition\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TrafficSignRecognition\StopSignDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TrafficSignRecognition\TrafficSignRecognitionForm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\TrafficSignRecognition\TrafficSignRecognitionForm.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\VideoSurveillance\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\VideoSurveillance\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\VideoSurveillance\VideoSurveillance.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\VideoSurveillance\VideoSurveillance.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Client\Form1.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Client\Form1.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Client\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Client\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Host\IImageService.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Host\ImageService.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Host\Program.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\Webservice_Host\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\WPF\App.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\WPF\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\WPF\Properties\Resources.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\WPF\Properties\Settings.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\WPF\Window1.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\AboutPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\App.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\ButtonTextImagePage.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\DnnPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\FaceDetectionPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\FaceLandmarkDetectionPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\FeatureMatchingPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\HelloWorldPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\OcrPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\PedestrianDetectionPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\PlanarSubdivisionPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\Core\Viz3dPage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\UWP\App.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\UWP\MainPage.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\UWP\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\WPF\App.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\WPF\MainWindow.xaml.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\WPF\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\WPF\Properties\Resources.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\WPF\Properties\Settings.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\ITessResultRenderer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\LocaleGuard.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\OcrEngineMode.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\OcrInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\PageIterator.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\PageSegMode.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\Pix.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\Tesseract.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\TesseractResult.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\TessResultRenderer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.OCR\VectorOfTesseractResult.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\GeometricChange.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\GLImageView.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\GLImageViewer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\GLImageViewer.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\ImageBufferFactory.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI.GL\Report.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\HistogramBox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\HistogramBox.designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\HistogramViewer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\HistogramViewer.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageBox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageBox.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageProperty.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageProperty.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImagePropertyDialog.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImagePropertyDialog.designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageViewer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ImageViewer.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\MatrixBox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\MatrixBox.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\MatrixViewer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\MatrixViewer.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\Operation.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\OperationsView.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\OperationsView.designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\PanAndZoomPictureBox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ParameterInputDialog.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\ParameterInputDialog.designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\Properties\StringTable.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.UI\Properties\StringTable.zh-CN.Designer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.World\ApiDefinition.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.World\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV.WPF\BitmapSourceConverter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Affine3d.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Calib3d\Calib3dInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Calib3d\IStereoMatcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Calib3d\StereoBM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Calib3d\StereoSGBM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Bgr.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Bgra.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\ColorInfoAttribute.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\DisplayColorAttribute.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Gray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Hls.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Hsv.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\IColor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Lab.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Luv.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Rgb.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Rgb565.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Rgba.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Xyz.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Color\Ycc.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\CvArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\CvString.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\FileNode.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\FileNode.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\FileStorage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\IAlgorithm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\IImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\IInputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\IInputOutputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Image.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\InputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\InputArray.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\InputOutputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\IOutputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Map.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Mat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Mat.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\MatDataAllocator.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\MatND.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Matrix.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Moments.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\Moments.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\OutputArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\OutputArray.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\RNG.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\ScalarArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\SparseMatrix.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\TimedImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\UMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Core\UMat.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Cvb\CvBlob.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Cvb\CvBlobDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Cvb\CvBlobs.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Cvb\CvTrack.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Cvb\CvTracks.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\DenseHistogram.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Backend.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\BackendTargetPair.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\DnnInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Layer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Layer.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Net.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Net.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Dnn\Target.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\AgastFeatureDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\AKAZE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\BFMatcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\BOWImgDescriptorExtractor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\BOWKMeansTrainer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\Brisk.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\DescriptorMatcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\FastFeatureDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\Feature2D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\Features2DInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\Features2DTracker.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\FlannBasedMatcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\GFTTDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\KAZE.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\MSERDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\ORBDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\SimpleBlobDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Features2D\SimpleBlobDetectorParams.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\CenterInitType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\FlannInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\IIndexParams.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\Index.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\Index3D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Flann\IndexParams.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Geodetic\GeodeticCoordinate.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Imgproc\ConvolutionKernelF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Imgproc\Subdiv2D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Imgproc\VoroniFacet.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\ANN_MLP.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\ANN_MLP.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\AnnMlpTrainingFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\Boost.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\Boost.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\BoostSplitCreiteria.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\BoostType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\DataLayoutType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\DTrees.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\DTrees.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\EM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\EM.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\GBTrees.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\KNearest.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\KNearest.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\LogisticRegression.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\LogisticRegression.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\MlInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\NormalBayesClassifier.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\RTrees.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\RTrees.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\StatModel.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\SVM.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\SVM.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\SVMSGD.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\SVMSGD.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\TrainData.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ml\VarType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Objdetect\CascadeClassifier.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Objdetect\HOGDescriptor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Objdetect\QRCodeDetector.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Objdetect\QRCodeDetector.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Device.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Device.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Image2D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Kernel.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Kernel.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\KernelArg.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\PlatformInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\PlatformInfo.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\ProgramSource.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Ocl\Queue.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\DenseRLOFOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\DualTVL1OpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\DualTVL1OpticalFlow.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\MotionHistory.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\OptFlowDeepFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\OpticalFlowPCAFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\RLOFOpticalFlowParameter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\RLOFOpticalFlowParameter.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Optflow\SparseRLOFOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\AlignExposures.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\CalibrateCRF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\MergeExposures.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\Tonemap.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\Tonemap.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapDrago.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapDrago.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapMantiuk.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapMantiuk.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapReinhard.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Photo\TonemapReinhard.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\Android\BitmapArgb8888Image.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\Android\ImageAndroid.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\Android\MatAndroid.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\AccessType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\AdaptiveThresholdType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\BackOrFront.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\BorderType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CalibCbType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CalibCgType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CalibType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CapProp.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ChainApproxMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CheckType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CloningMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CmpType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ColorConversion.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ColorMapType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ConnectedComponentsTypes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\Connectivity.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ContoursMatchType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\CovarMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DctType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DecompMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DepthType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DistLabelType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DistType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\DxtType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\EdgePreservingFilterFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\EigobjType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ElementShape.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ErrorCodes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\FlipType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\FloodFillType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\FmType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\FontFace.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\GemmType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\General.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\GrabcutInitType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\HaarDetectionType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\HandEyeCalibrationMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\HistogramCompMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\HoughType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ImreadModes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ImwriteFlags.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\InpaintType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\Inter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\IplDepth.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\KMeansInitType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\LineType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\LKFlowFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\MorphOp.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\MotionType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\MulSpectrumsType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\NamedWindowType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\NormType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\OpticalflowFarnebackFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\Orientation.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\PcaType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\RectIntersectType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ReduceDimension.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ReduceType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\RetrType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\RobustEstimationAlgorithm.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\RotateFlags.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SeqConst.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SeqEltype.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SeqFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SeqKind.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SeqType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SmoothType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SolveLPResult.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SolvePnpMethod.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SortFlags.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\StereoBmPrefilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\StereoRectifyType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\StorageOp.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\Subdiv2DPointLocationType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\SvdFlag.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\TemplateMatchingType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\TermCritType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\ThresholdType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvEnum\Warp.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeCalib3d.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeCore.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeCvextern.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeEntryPoints.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeFeatures2d.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeHighGUI.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeImgcodecs.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeImgproc.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeObjdetect.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeOptim.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokePhoto.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvInvokeVideo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\CircleF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\ColorPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Cross2DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Cuboid.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\CvStructSizes.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Ellipse.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\IConvexPolygon.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\IConvexPolygonF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvAvgComp.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvMatND.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvObjectDetection.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvPoint2D64f.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvPoint3D32f.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvPoint3D64f.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvScalar.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvSlice.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MCvTermCriteria.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MDMatch.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MIplImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\MKeyPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Quaternions.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Range.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\RangeF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\RotatedRect.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\RotationMatrix2D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\RotationVector3D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Triangle2DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\CvType\Triangle3DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\iOS\ImageiOS.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\iOS\libcvextern.linkwith.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\iOS\MatiOS.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\iOS\UMatiOS.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\Point.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\PointF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\Rectangle.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\RectangleF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\Size.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Drawing\SizeF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\System.Runtime.Serialization\Serialization.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PInvoke\Windows.Store\ImageWindowsStore.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PointAndLine\LineSegment2D.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PointAndLine\LineSegment2DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PointAndLine\LineSegment3DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\PointAndLine\PointCollection.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Reflection\ExposableMethodAttribute.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Reflection\GenericParameter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Reflection\ReflectColorType.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Reflection\ReflectIImage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Shape\HistogramCostExtractor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Shape\ShapeContextDistanceExtractor.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Shape\ShapeDistanceExtractor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Shape\ShapeTransformer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Stitching\Blender.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Stitching\Stitcher.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Stitching\Stitcher.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Stitching\WarperCreator.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Superres\FrameSource.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Superres\SuperResolution.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Tiff\TiffWriter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Tiff\TileTiffWriter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\BinaryFileStorage.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\CvException.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\CvInvokeUtil.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\CvToolbox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\DataLogger.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\SharedPtrObject.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\StructSize.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\TbbTaskScheduler.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfByte.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfColorPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfCvString.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfCvStringExtra.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfDMatch.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfDouble.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfFloat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfInt.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfKeyPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfKeyPointExtra.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfMatExtra.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfOclPlatformInfo.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfPoint3D32F.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfPointF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfRect.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfTriangle2DF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfUMat.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfDMatch.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfInt.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfPoint.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfPoint3D32F.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfPointF.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\VectorOfVectorOfRect.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Util\ZlibCompression.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\BackgroundSubtractor.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\BackgroundSubtractorKNN.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\BackgroundSubtractorKNN.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\BackgroundSubtractorMOG2.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\BackgroundSubtractorMOG2.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\DenseOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\DISOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\DISOpticalFlow.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\FarnebackOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\KalmanFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\KalmanFilter.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\SparseOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\SparsePyrLKOpticalFlow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\VariationalRefinement.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Video\VariationalRefinement.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\ICapture.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\IDuplexCapture.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\IDuplexCaptureCallback.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\KinectCapture.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\VideoCapture.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\VideoCapture.g.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videoio\VideoWriter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\CaptureFrameSource.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\FrameSource.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\GaussianMotionFilter.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\MotionModel.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\OnePassStabilizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\TwoPassStabilizer.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Videostab\VideoStabInvoke.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\IWidget.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\Viz3d.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WArrow.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCircle.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCloud.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCone.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCoordinateSystem.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCube.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WCylinder.cs" />
+    <Compile Include="Assets\Plugins\Emgu.CV\Viz\WText.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\Android\AndroidFileAsset.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\DisposableObject.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\EventArgs.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\ICodeGenerable.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\IInterpolatable.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\PinnedArray.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\Platform.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\Toolbox.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\TypeEnum.cs" />
+    <Compile Include="Assets\Plugins\Emgu.Util\UnmanagedObject.cs" />
+    <None Include="Assets\Plugins\lib\3rdParty\OpenTK.GLControl.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalface_alt2.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalcatface.xml" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\CPlusPlus\ReadMe.txt" />
+    <None Include="Assets\Plugins\opencv_contrib\modules\text\samples\trained_classifierNM1.xml" />
+    <None Include="Assets\Plugins\opencv_contrib\modules\text\samples\trained_classifierNM2.xml" />
+    <None Include="Assets\Plugins\lib\opencv.license.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalface_alt.xml" />
+    <None Include="Assets\Plugins\opencv\data\haarcascades\haarcascade_frontalface_default.xml" />
+    <None Include="Assets\Plugins\opencv_contrib\modules\text\samples\trained_classifier_erGrouping.xml" />
+    <None Include="Assets\Plugins\Emgu.CV.License.txt" />
+    <None Include="Assets\Plugins\etc\lbpcascades\lbpcascade_frontalface_improved.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalface_default.xml" />
+    <None Include="Assets\Plugins\libs\Emgu.CV.World.xml" />
+    <None Include="Assets\Plugins\etc\lbpcascades\lbpcascade_frontalcatface.xml" />
+    <None Include="Assets\Plugins\bin\Emgu.CV.World.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalcatface_extended.xml" />
+    <None Include="Assets\Plugins\etc\lbpcascades\lbpcascade_silverware.xml" />
+    <None Include="Assets\Plugins\etc\lbpcascades\lbpcascade_profileface.xml" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\LatentSvmDetector\cat.xml" />
+    <None Include="Assets\Plugins\lib\opencl-icd-1.2.11.0\icd\README.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_licence_plate_rus_16stages.xml" />
+    <None Include="Assets\Plugins\lib\3rdParty\OpenTK.xml" />
+    <None Include="Assets\Plugins\etc\lbpcascades\lbpcascade_frontalface.xml" />
+    <None Include="Assets\Plugins\lib\opencl-icd-1.2.11.0\icd\inc\README.txt" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\PersistentImage.hbm.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_lowerbody.xml" />
+    <None Include="Assets\Plugins\lib\opencl-icd-1.2.11.0\icd\LICENSE.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_russian_plate_number.xml" />
+    <None Include="Assets\Plugins\opencv\data\haarcascades\haarcascade_eye.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_eye.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_fullbody.xml" />
+    <None Include="Assets\Plugins\bin\ZedGraph.license.txt" />
+    <None Include="Assets\Plugins\lib\3rdParty\cvblob.license.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_frontalface_alt_tree.xml" />
+    <None Include="Assets\Plugins\lib\3rdParty\ZedGraph.license.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_righteye_2splits.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_upperbody.xml" />
+    <None Include="Assets\Plugins\lib\3rdParty\ZedGraph.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_eye_tree_eyeglasses.xml" />
+    <None Include="Assets\Plugins\Emgu.CV\README.txt" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_profileface.xml" />
+    <None Include="Assets\Plugins\lib\3rdParty\tesseract-ocr.license.txt" />
+    <None Include="Assets\Plugins\bin\Emgu.CV.UI.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_smile.xml" />
+    <None Include="Assets\Plugins\bin\Emgu.CV.UI.GL.xml" />
+    <None Include="Assets\Plugins\etc\haarcascades\haarcascade_lefteye_2splits.xml" />
+    <None Include="Assets\Plugins\README.txt" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\ImageDatabase\SqliteDB.xml" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\XamarinForms\UWP\Properties\Default.rd.xml" />
+    <None Include="Assets\Plugins\Emgu.CV.Example\RealtimeCamera.UWP\Properties\Default.rd.xml" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CloudWebServicesModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FacebookModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Locator">
+      <HintPath>F:/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/GoogleARCore/SDK/Plugins/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/kokos/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/kokos/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/Emgu.CV.Example/ImageDatabase/Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/Emgu.CV.Example/ImageDatabase/log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/lib/3rdParty/OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/bin/Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/bin/ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/Emgu.CV.Example/ImageDatabase/NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/lib/3rdParty/OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.resources">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/lib/3rdParty/zh-CN/ZedGraph.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/Emgu.CV.Example/ImageDatabase/Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/Emgu.CV.Example/ImageDatabase/NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/bin/Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/bin/Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/lib/3rdParty/ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>C:/Users/kokos/OneDrive/Dokumenty/Trajectories/Assets/Plugins/libs/Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
