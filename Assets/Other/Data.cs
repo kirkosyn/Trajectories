@@ -29,20 +29,6 @@ public class Data
 
     }
 
-    /*public struct ColorParams
-    {
-        public float saturation;
-        public float hue;
-        public float value;
-
-        public ColorParams(float x, float y, float z)
-        {
-            hue = x;
-            saturation = y;
-            value = z;
-        }
-    }*/
-
     [System.Serializable]
     public struct FTrack
     {
@@ -146,9 +132,6 @@ public class Data
         int minVal;
         listOfMomentums = new List<Momentums>();
 
-        //SetColorPalette();
-        //SortMomentums();
-
         tracksParamsList = new TracksParamsList()
         {
             tracksParams = new TracksParams[length]
@@ -170,11 +153,6 @@ public class Data
                     shift = new Vector3(fTrack.fPolyX[0] / reduction,
                             fTrack.fPolyY[0] / reduction,
                             fTrack.fPolyZ[0] / reduction) - pose;
-
-                    //color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-                    //int index = listOfMomentums.FindIndex(x => x.iterator == i);
-
-                    //color = colors[index];
 
                     tracksParamsList.tracksParams[i] = new TracksParams(false, minVal, shift, pose, Color.blue);
 
@@ -224,7 +202,6 @@ public class Data
         {
             colors[i] = new Color32(current, 0, 0, 255);
             current = System.Convert.ToByte(System.Convert.ToInt32(current) + step);
-            //Debug.Log("color: " + current.ToString());
         }
     }
 
@@ -236,36 +213,5 @@ public class Data
             color = colors[index];
             tracksParamsList.tracksParams[iterator].color = color;
         }
-
-        //for (int i = 0; i < trackIterators.Count(); i++)
-        //{
-        //    int j = trackIterators[i];
-        //    int index = listOfMomentums.FindIndex(x => x.iterator == j);
-        //    color = colors[index];
-        //    tracksParamsList.tracksParams[j].color = color;
-        //}
     }
 }
-
-
-
-//public void SortMomentums()
-    //{
-        //listOfMomentums = new List<Momentums>();
-        //int iterator = 0;
-       
-
-        //foreach (FTrack element in tracksList.fTracks)
-        //{
-        //    momentumValue = CalculateMomentumValue(element.fMomentum[0], element.fMomentum[1], element.fMomentum[2]);
-
-        //    //if (momentumValue < maxMomentum && momentumValue > minMomentum)
-        //    //{
-        //        listOfMomentums.Add(new Momentums(momentumValue, iterator));
-        //        iterator++;
-        //    //}
-
-        //}
-
-        //listOfMomentums.Sort((s1, s2) => s1.momentum.CompareTo(s2.momentum));
-    //}

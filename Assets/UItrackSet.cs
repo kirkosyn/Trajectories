@@ -49,9 +49,7 @@ public class UItrackSet : MonoBehaviour
     }
 
     public static void SetGameObject(GameObject[] goarr)
-    {
-        Debug.Log("SEEEEEEEEEEEEEEEEEEET");
-        
+    {        
         childGameObjects = goarr;
     }
 }
