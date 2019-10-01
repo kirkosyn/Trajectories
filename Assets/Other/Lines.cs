@@ -12,6 +12,7 @@ public class Lines : MonoBehaviour
     int length;
     //Color color;
     GameObject[] childGameObjects;
+    List<GameObject> cgoCopy;
     GameObject trackElementInLines;
     LineRenderer lr;
     Data.FTrack fTrack;
@@ -56,11 +57,13 @@ public class Lines : MonoBehaviour
     public IEnumerator DrawLines(GameObject gameObject, Vector3 pose,
         GameObject prefab, Quaternion rotation) //, GameObject aliceModel, GameObject trackElement)//, int i)
     {
-        data = new Data(UIelements.minMomentum, UIelements.maxMomentum);
+        data = new Data(UIelements.minMomentum, UIelements.maxMomentum, UIelements.fPID);
         pose += new Vector3(0, 0.25f, 0);
         LoadResources(gameObject, pose);
 
         track = tracksParamsList.tracksParams[0];
+
+        cgoCopy = new List<GameObject>();
 
         //GameObject aliceModelObject = Instantiate(aliceModel, track.actualPose + offset, rotation) as GameObject;
         //aliceModelObject.transform.parent = gameObject.transform;
@@ -80,11 +83,11 @@ public class Lines : MonoBehaviour
                         childGameObjects[j] = Instantiate(prefab) as GameObject;
                         childGameObjects[j].transform.parent = gameObject.transform;
                         childGameObjects[j].AddComponent<LineRenderer>();
+                        childGameObjects[j].name = j.ToString();
                         //trackElementInLines = Instantiate(trackElement, track.actualPose, rotation,
                         //  childGameObjects[j].transform.parent) as GameObject;
                         lr = childGameObjects[j].GetComponent<LineRenderer>() as LineRenderer;
-
-
+                        cgoCopy.Add(childGameObjects[j]);
                         //childGameObjects[j].AddComponent<CapsuleCollider>();
 
                         SetLine(lr, track.color);
@@ -118,15 +121,17 @@ public class Lines : MonoBehaviour
             yield return new WaitForSecondsRealtime(time);
             Debug.Log("Czas2 " + Time.time);
         }
+
+        UItrackSet.SetGameObject(cgoCopy.ToArray());
     }
 
     private void LoadResources(GameObject gameObject, Vector3 pose)
     {
         data.LoadFile();
         data.SetTheParams(gameObject, pose);
-        childGameObjects = new GameObject[data.trackIterators.Count]; //data.length
+        childGameObjects = new GameObject[data.length];
         tracksParamsList = data.tracksParamsList;
-        length = data.trackIterators.Count; //data.length
+        length = data.length;
         maxVal = data.maxVal;
     }
 

@@ -13,6 +13,7 @@ public class UIelements : MonoBehaviour {
 
     public static float minMomentum;
     public static float maxMomentum;
+    public static int fPID;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,10 @@ public class UIelements : MonoBehaviour {
 
         minMomentum = minMomSlider.value;
         maxMomentum = maxMomSlider.value;
-        //Debug.Log(dataSetBoxList.options[dataSetBoxList.value].text);
+        string option = dataSetBoxList.options[dataSetBoxList.value].text;
+        
+        if (!option.Equals("All sets"))
+            fPID = int.Parse(option.Substring(6));
+        else fPID = -1;
     }
 }

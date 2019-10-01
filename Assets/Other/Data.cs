@@ -6,10 +6,22 @@ using UnityEngine;
 public class Data
 {
 
+    public Data(float minMomentum, float maxMomentum, int fPID)
+    {
+        this.minMomentum = minMomentum;
+        this.maxMomentum = maxMomentum;
+        this.fPID = fPID;
+    }
+
     public Data(float minMomentum, float maxMomentum)
     {
         this.minMomentum = minMomentum;
         this.maxMomentum = maxMomentum;
+    }
+
+    public Data(int fPID)
+    {
+        this.fPID = fPID;
     }
 
     public Data()
@@ -113,6 +125,7 @@ public class Data
     public List<int> trackIterators = new List<int>();
     public float maxMomentum;
     public float minMomentum;
+    public int fPID;
     public string resourceAddr = "collision";
 
     public List<Momentums> listOfMomentums;
@@ -131,10 +144,10 @@ public class Data
     {
         length = tracksList.fTracks.Length;
         int minVal;
-        int iterator = 0;
+        listOfMomentums = new List<Momentums>();
 
         //SetColorPalette();
-        SortMomentums();
+        //SortMomentums();
 
         tracksParamsList = new TracksParamsList()
         {
@@ -145,31 +158,36 @@ public class Data
         {
             fTrack = tracksList.fTracks[i];
             momentumValue = CalculateMomentumValue(fTrack.fMomentum[0], fTrack.fMomentum[1], fTrack.fMomentum[2]);
-
-            if (momentumValue > minMomentum && momentumValue < maxMomentum)
+            
+            if ((!fPID.Equals(-1) && fTrack.fPID.Equals(fPID)) || fPID.Equals(-1))
             {
-                minVal = MinimalValue(i);
-                trackIterators.Add(iterator);
-                iterator++;
-                Debug.Log("iterator = " + iterator);
+                if (momentumValue > minMomentum && momentumValue < maxMomentum)
+                {
+                    minVal = MinimalValue(i);
+                    trackIterators.Add(i);
+                    listOfMomentums.Add(new Momentums(momentumValue, i));
 
-                shift = new Vector3(fTrack.fPolyX[0] / reduction,
-                        fTrack.fPolyY[0] / reduction,
-                        fTrack.fPolyZ[0] / reduction) - pose;
+                    shift = new Vector3(fTrack.fPolyX[0] / reduction,
+                            fTrack.fPolyY[0] / reduction,
+                            fTrack.fPolyZ[0] / reduction) - pose;
 
-                //color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-                //int index = listOfMomentums.FindIndex(x => x.iterator == i);
+                    //color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+                    //int index = listOfMomentums.FindIndex(x => x.iterator == i);
 
-                //color = colors[index];
+                    //color = colors[index];
 
-                tracksParamsList.tracksParams[i] = new TracksParams(false, minVal, shift, pose, Color.blue);
+                    tracksParamsList.tracksParams[i] = new TracksParams(false, minVal, shift, pose, Color.blue);
 
-                if (maxVal < minVal)
-                    maxVal = minVal;
+                    if (maxVal < minVal)
+                        maxVal = minVal;
+                }
             }
+            else
+                continue;
         }
 
-        SetColorPalette(trackIterators.Count());
+        listOfMomentums.Sort((s1, s2) => s1.momentum.CompareTo(s2.momentum));
+        SetColorPalette(trackIterators.Count);
         SetAccordingColors();
     }
 
@@ -212,34 +230,42 @@ public class Data
 
     public void SetAccordingColors()
     {
-        for (int i = 0; i < trackIterators.Count(); i++)
+        foreach (int iterator in trackIterators)
         {
-            int j = trackIterators[i];
-            Debug.Log("i = " + i + " j = " + j);
-            int index = listOfMomentums.FindIndex(x => x.iterator == j);
-            Debug.Log("index = " + index);
+            int index = listOfMomentums.FindIndex(x => x.iterator == iterator);
             color = colors[index];
-            tracksParamsList.tracksParams[j].color = color;
-        }
-    }
-
-    public void SortMomentums()
-    {
-        listOfMomentums = new List<Momentums>();
-        int iterator = 0;
-
-        foreach (FTrack element in tracksList.fTracks)
-        {
-            momentumValue = CalculateMomentumValue(element.fMomentum[0], element.fMomentum[1], element.fMomentum[2]);
-
-            if (momentumValue < maxMomentum && momentumValue > minMomentum)
-            {
-                listOfMomentums.Add(new Momentums(momentumValue, iterator));
-                iterator++;
-            }
-
+            tracksParamsList.tracksParams[iterator].color = color;
         }
 
-        listOfMomentums.Sort((s1, s2) => s1.momentum.CompareTo(s2.momentum));
+        //for (int i = 0; i < trackIterators.Count(); i++)
+        //{
+        //    int j = trackIterators[i];
+        //    int index = listOfMomentums.FindIndex(x => x.iterator == j);
+        //    color = colors[index];
+        //    tracksParamsList.tracksParams[j].color = color;
+        //}
     }
 }
+
+
+
+//public void SortMomentums()
+    //{
+        //listOfMomentums = new List<Momentums>();
+        //int iterator = 0;
+       
+
+        //foreach (FTrack element in tracksList.fTracks)
+        //{
+        //    momentumValue = CalculateMomentumValue(element.fMomentum[0], element.fMomentum[1], element.fMomentum[2]);
+
+        //    //if (momentumValue < maxMomentum && momentumValue > minMomentum)
+        //    //{
+        //        listOfMomentums.Add(new Momentums(momentumValue, iterator));
+        //        iterator++;
+        //    //}
+
+        //}
+
+        //listOfMomentums.Sort((s1, s2) => s1.momentum.CompareTo(s2.momentum));
+    //}

@@ -258,6 +258,7 @@
     <Compile Include="Assets\Other\Data.cs" />
     <Compile Include="Assets\Other\Lines.cs" />
     <Compile Include="Assets\UIelements.cs" />
+    <Compile Include="Assets\UItrackSet.cs" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
