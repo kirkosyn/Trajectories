@@ -11,7 +11,6 @@ public class Lines : MonoBehaviour
     public Data data;
     int length;
     GameObject[] childGameObjects;
-    List<GameObject> cgoCopy;
     GameObject trackElementInLines;
     LineRenderer lr;
     Data.FTrack fTrack;
@@ -31,53 +30,45 @@ public class Lines : MonoBehaviour
     {
         data = new Data(UIelements.minMomentum, UIelements.maxMomentum, UIelements.fPID);
         pose += new Vector3(0, 0.25f, 0);
-        LoadResources(gameObject, pose);
 
-        track = tracksParamsList.tracksParams[0];
-
-        cgoCopy = new List<GameObject>();
-       
+        LoadResources(gameObject, prefab, pose);
 
         for (int i = 0; i < maxVal; i++)
         {
             for (int j = 0; j < length; j++)
             {
-                if (data.trackIterators.Exists(x => x == j) == true)
+                track = tracksParamsList.tracksParams[data.trackIterators[j]];
+
+                if (!track.isEnd)
                 {
-                    track = tracksParamsList.tracksParams[j];
+                    fTrack = data.tracksList.fTracks[data.trackIterators[j]];
+                    GameObject go = Instantiate(prefab) as GameObject;
+                    go.transform.parent = childGameObjects[j].transform;
+                    go.AddComponent<LineRenderer>();
 
-                    if (!track.isEnd)
+                    lr = go.GetComponent<LineRenderer>() as LineRenderer;
+
+                    SetLine(lr, track.color);
+
+                    lr.SetPosition(0, track.actualPose);
+
+                    nextPose = new Vector3(fTrack.fPolyX[i] / reduction,
+                            fTrack.fPolyY[i] / reduction,
+                            fTrack.fPolyZ[i] / reduction) - track.shift;
+
+                    lr.SetPosition(1, nextPose);
+
+                    track.actualPose = nextPose;
+
+                    if (track.pointsVal == i + 1)
                     {
-                        fTrack = data.tracksList.fTracks[j];
-                        childGameObjects[j] = Instantiate(prefab) as GameObject;
-                        childGameObjects[j].transform.parent = gameObject.transform;
-                        childGameObjects[j].AddComponent<LineRenderer>();
-                        childGameObjects[j].name = j.ToString();
-
-                        lr = childGameObjects[j].GetComponent<LineRenderer>() as LineRenderer;
-                        cgoCopy.Add(childGameObjects[j]);
-
-                        SetLine(lr, track.color);
-
-                        lr.SetPosition(0, track.actualPose);
-
-                        nextPose = new Vector3(fTrack.fPolyX[i] / reduction,
-                                fTrack.fPolyY[i] / reduction,
-                                fTrack.fPolyZ[i] / reduction) - track.shift;
-
-                        lr.SetPosition(1, nextPose);
-
-                        track.actualPose = nextPose;
-
-                        if (track.pointsVal == i + 1)
-                        {
-                            track.isEnd = true;
-                        }
-
-                        tracksParamsList.tracksParams[j] = track;
-
+                        track.isEnd = true;
                     }
+
+                    tracksParamsList.tracksParams[data.trackIterators[j]] = new Data.TracksParams(track);
+
                 }
+
             }
 
             Debug.Log("Czas " + Time.time);
@@ -85,17 +76,24 @@ public class Lines : MonoBehaviour
             Debug.Log("Czas2 " + Time.time);
         }
 
-        UItrackSet.SetGameObject(cgoCopy.ToArray());
+        UItrackSet.SetGameObject(childGameObjects);
     }
 
-    private void LoadResources(GameObject gameObject, Vector3 pose)
+    private void LoadResources(GameObject gameObject, GameObject prefab, Vector3 pose)
     {
         data.LoadFile();
-        data.SetTheParams(gameObject, pose);
-        childGameObjects = new GameObject[data.length];
-        tracksParamsList = data.tracksParamsList;
-        length = data.length;
+        data.SetTheParams(pose);
+        length = data.trackIterators.Count;
         maxVal = data.maxVal;
+        tracksParamsList = data.tracksParamsList;
+        childGameObjects = new GameObject[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            childGameObjects[i] = Instantiate(prefab) as GameObject;
+            childGameObjects[i].transform.parent = gameObject.transform;
+            childGameObjects[i].name = i.ToString();
+        }
     }
 
     private void SetLine(LineRenderer lr, Color32 col)

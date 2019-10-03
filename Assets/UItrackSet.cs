@@ -19,37 +19,55 @@ public class UItrackSet : MonoBehaviour
         index = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
         nextBtn.onClick.AddListener(SetNextTrack);
         previousBtn.onClick.AddListener(SetPreviousTrack);
     }
 
+    void OnDisable()
+    {
+        nextBtn.onClick.RemoveAllListeners();
+        previousBtn.onClick.RemoveAllListeners();
+    }
+
+    // Update is called once per frame
+    void Update() { }
+
     void SetNextTrack()
     {
-        if (index < childGameObjects.Length)
-            index++;
-        
-        childGameObjects.Where(x => x.name.Equals(childGameObjects[index].name)).ToList<GameObject>().ForEach(x => x.SetActive(true));
-        childGameObjects.Where(x => !x.name.Equals(childGameObjects[index].name)).ToList<GameObject>().ForEach(x => x.SetActive(false));
-        
+        if (index < childGameObjects.Length - 1)
+            index = index + 1;
+
+        foreach (GameObject x in childGameObjects)
+        {
+            if (x.name != index.ToString())
+                x.SetActive(false);
+            else
+                x.SetActive(true);
+        }
+
         trackIdText.text = "Track id " + childGameObjects[index].name;
     }
 
     void SetPreviousTrack()
     {
         if (index > 0)
-            index--;
+            index = index - 1;
 
-        childGameObjects.Where(x => x.name.Equals(childGameObjects[index].name)).ToList<GameObject>().ForEach(x => x.SetActive(true));
-        childGameObjects.Where(x => !x.name.Equals(childGameObjects[index].name)).ToList<GameObject>().ForEach(x => x.SetActive(false));
+        foreach (GameObject x in childGameObjects)
+        {
+            if (x.name != index.ToString())
+                x.SetActive(false);
+            else
+                x.SetActive(true);
+        }
 
         trackIdText.text = "Track id " + childGameObjects[index].name;
     }
 
     public static void SetGameObject(GameObject[] goarr)
-    {        
+    {
         childGameObjects = goarr;
     }
 }

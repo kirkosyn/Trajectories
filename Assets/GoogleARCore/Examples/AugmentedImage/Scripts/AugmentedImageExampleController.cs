@@ -105,25 +105,17 @@ namespace GoogleARCore.Examples.AugmentedImage
             Session.GetTrackables<AugmentedImage>(
                 m_TempAugmentedImages, TrackableQueryFilter.Updated);
 
-            //Debug.Log("Before");
-
             if (!isHit)
             // Create visualizers and anchors for updated augmented images that are tracking and do
             // not previously have a visualizer. Remove visualizers for stopped images.
             {
                 foreach (var image in m_TempAugmentedImages)
                 {
-                    Debug.Log("Tracking " + image.Name);
-
                     AugmentedImageVisualizer visualizer = null;
                     m_Visualizers.TryGetValue(image.DatabaseIndex, out visualizer);
 
-                    Debug.Log("DB index " + image.DatabaseIndex);
-                    Debug.Log("DB trackingState " + image.TrackingState.ToString());
-
                     if (image.TrackingState == TrackingState.Tracking && visualizer == null)
                     {
-                        //Debug.Log("HEREEEEEEEEEEe");
                         // Create an anchor to ensure that ARCore keeps tracking this augmented image.
                         Anchor anchor = image.CreateAnchor(image.CenterPose);
 
@@ -135,21 +127,11 @@ namespace GoogleARCore.Examples.AugmentedImage
                         visualizer = new AugmentedImageVisualizer();
                         visualizer.Image = image;
                         m_Visualizers.Add(image.DatabaseIndex, visualizer);
-
-                        Debug.Log("FOUND " + image.Name);
+                        
                         values[image.Name]++;
-                        //string text = "";
-
-                        //foreach (string value in values.Keys)
-                        //{
-                        //    text = text + value + " " + values[value] + "\n";
-                        //}
-
-                        //Debug.Log(text);
+                        
                         if (!isHit)
                         {
-                            Debug.Log("Starting");
-
                             StartCoroutine(lines.DrawLines(simulation, anchor.transform.position, new GameObject(), anchor.transform.rotation));
                             isHit = true;
                         }

@@ -68,6 +68,14 @@ public class Data
             actualPose = q;
             color = w;
         }
+        public TracksParams(TracksParams track)
+        {
+            isEnd = track.isEnd;
+            pointsVal = track.pointsVal;
+            shift = track.shift;
+            actualPose = track.actualPose;
+            color = track.color;
+        }
     }
 
     public class TracksParamsList
@@ -94,8 +102,6 @@ public class Data
     }
 
     public Color32[] colors;
-
-
     public TracksList tracksList;
     public TracksParamsList tracksParamsList;
     public TracksParams track;
@@ -113,7 +119,6 @@ public class Data
     public float minMomentum;
     public int fPID;
     public string resourceAddr = "collision";
-
     public List<Momentums> listOfMomentums;
 
     //wczytanie pliku
@@ -126,11 +131,11 @@ public class Data
     }
 
     //ustawienie parametrów śladów
-    public void SetTheParams(GameObject gameObject, Vector3 pose)
+    public void SetTheParams(Vector3 pose)
     {
-        length = tracksList.fTracks.Length;
         int minVal;
         listOfMomentums = new List<Momentums>();
+        length = tracksList.fTracks.Length;
 
         tracksParamsList = new TracksParamsList()
         {
@@ -141,12 +146,12 @@ public class Data
         {
             fTrack = tracksList.fTracks[i];
             momentumValue = CalculateMomentumValue(fTrack.fMomentum[0], fTrack.fMomentum[1], fTrack.fMomentum[2]);
-            
+
             if ((!fPID.Equals(-1) && fTrack.fPID.Equals(fPID)) || fPID.Equals(-1))
             {
                 if (momentumValue > minMomentum && momentumValue < maxMomentum)
                 {
-                    minVal = MinimalValue(i);
+                    minVal = MinimalValue(fTrack);
                     trackIterators.Add(i);
                     listOfMomentums.Add(new Momentums(momentumValue, i));
 
@@ -170,25 +175,19 @@ public class Data
     }
 
     //wyznaczenie najmniejszej długości śladu
-    public int MinimalValue(int i)
+    public int MinimalValue(FTrack fTrack)
     {
-        lengthList = new List<int>()
-        {
-        tracksList.fTracks[i].fPolyX.Count,
-        tracksList.fTracks[i].fPolyY.Count,
-        tracksList.fTracks[i].fPolyZ.Count
-        };
-
-        return lengthList.Min();
+        return Mathf.Min(fTrack.fPolyX.Count,
+                         fTrack.fPolyY.Count,
+                         fTrack.fPolyZ.Count);
     }
 
     //wyliczenie wartości wektora pędu na podstawie składowych x,y,z
     public float CalculateMomentumValue(float x, float y, float z)
     {
-        float res = Mathf.Sqrt(Mathf.Pow(x, 2) +
-                               Mathf.Pow(y, 2) +
-                               Mathf.Pow(z, 2));
-        return res;
+        return Mathf.Sqrt(Mathf.Pow(x, 2) +
+                          Mathf.Pow(y, 2) +
+                          Mathf.Pow(z, 2));
     }
 
 
