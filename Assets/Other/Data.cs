@@ -118,7 +118,7 @@ public class Data
     public float maxMomentum;
     public float minMomentum;
     public int fPID;
-    public string resourceAddr = "collision";
+    public string resourceAddr = UIelements.eventNum;
     public List<Momentums> listOfMomentums;
 
     //wczytanie pliku
@@ -146,23 +146,26 @@ public class Data
         {
             fTrack = tracksList.fTracks[i];
             momentumValue = CalculateMomentumValue(fTrack.fMomentum[0], fTrack.fMomentum[1], fTrack.fMomentum[2]);
-
+            
             if ((!fPID.Equals(-1) && fTrack.fPID.Equals(fPID)) || fPID.Equals(-1))
             {
                 if (momentumValue > minMomentum && momentumValue < maxMomentum)
                 {
-                    minVal = MinimalValue(fTrack);
-                    trackIterators.Add(i);
-                    listOfMomentums.Add(new Momentums(momentumValue, i));
+                    if (fTrack.fPolyX.Count != 0 && fTrack.fPolyY.Count != 0 && fTrack.fPolyZ.Count != 0)
+                    {
+                        minVal = MinimalValue(fTrack);
+                        trackIterators.Add(i);
+                        listOfMomentums.Add(new Momentums(momentumValue, i));
 
-                    shift = new Vector3(fTrack.fPolyX[0] / reduction,
-                            fTrack.fPolyY[0] / reduction,
-                            fTrack.fPolyZ[0] / reduction) - pose;
+                        shift = new Vector3(fTrack.fPolyX[0] / reduction,
+                                fTrack.fPolyY[0] / reduction,
+                                fTrack.fPolyZ[0] / reduction) - pose;
 
-                    tracksParamsList.tracksParams[i] = new TracksParams(false, minVal, shift, pose, Color.blue);
+                        tracksParamsList.tracksParams[i] = new TracksParams(false, minVal, shift, pose, Color.blue);
 
-                    if (maxVal < minVal)
-                        maxVal = minVal;
+                        if (maxVal < minVal)
+                            maxVal = minVal;
+                    }
                 }
             }
             else
@@ -190,7 +193,7 @@ public class Data
                           Mathf.Pow(z, 2));
     }
 
-
+    //ustawienie dynamicznej palety barw dla śladów
     public void SetColorPalette(int length)
     {
         colors = new Color32[length];
@@ -204,6 +207,7 @@ public class Data
         }
     }
 
+    //przydzielenie kolorów konkretnym śladom
     public void SetAccordingColors()
     {
         foreach (int iterator in trackIterators)

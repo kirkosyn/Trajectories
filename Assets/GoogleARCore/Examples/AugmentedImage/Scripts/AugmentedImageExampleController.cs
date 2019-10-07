@@ -129,10 +129,14 @@ namespace GoogleARCore.Examples.AugmentedImage
                         m_Visualizers.Add(image.DatabaseIndex, visualizer);
                         
                         values[image.Name]++;
-                        
+
+                        Debug.Log("width " + image.ExtentX);
+                        Debug.Log("height " + image.ExtentZ);
+
                         if (!isHit)
                         {
-                            StartCoroutine(lines.DrawLines(simulation, anchor.transform.position, new GameObject(), anchor.transform.rotation));
+                            StartCoroutine(lines.DrawLines(simulation, anchor.transform.position, new GameObject(), 
+                                           anchor.transform.rotation, image.ExtentX, image.ExtentZ));
                             isHit = true;
                         }
                     }

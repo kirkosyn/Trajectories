@@ -14,22 +14,25 @@ public class Lines : MonoBehaviour
     GameObject trackElementInLines;
     LineRenderer lr;
     Data.FTrack fTrack;
-    readonly int reduction = 500;
+    float reduction;
     Vector3 nextPose;
     readonly Material material = new Material(Shader.Find("Sprites/Default"));
     Data.TracksParamsList tracksParamsList;
     Data.TracksParams track;
     int maxVal;
     readonly float width = 0.008f;
-    readonly float time = 0.001f; //0.5f
+    readonly float time = 0.1f; //0.001f; 
     float maxMomentum;
     float minMomentum;
 
+    //rysowanie trajektorii
     public IEnumerator DrawLines(GameObject gameObject, Vector3 pose,
-        GameObject prefab, Quaternion rotation)
+        GameObject prefab, Quaternion rotation, float img_width, float img_height)
     {
         data = new Data(UIelements.minMomentum, UIelements.maxMomentum, UIelements.fPID);
-        pose += new Vector3(0, 0.25f, 0);
+        //pose += new Vector3(0, 0.25f, 0);
+
+        reduction = 500 / img_height / img_width;
 
         LoadResources(gameObject, prefab, pose);
 
@@ -76,9 +79,11 @@ public class Lines : MonoBehaviour
             Debug.Log("Czas2 " + Time.time);
         }
 
+        UItrackSet.SetData(data);
         UItrackSet.SetGameObject(childGameObjects);
     }
 
+    //załadowanie danych o śladach
     private void LoadResources(GameObject gameObject, GameObject prefab, Vector3 pose)
     {
         data.LoadFile();
@@ -96,6 +101,7 @@ public class Lines : MonoBehaviour
         }
     }
 
+    //ustawienie odcinka (część trajektorii)
     private void SetLine(LineRenderer lr, Color32 col)
     {
         lr.material = material;

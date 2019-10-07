@@ -172,7 +172,7 @@ namespace GoogleARCore.Examples.HelloAR
                         Lines lines = new Lines();
                         isHit = true;
                         
-                        StartCoroutine(lines.DrawLines(andyObject, hit.Pose.position, prefab, hit.Pose.rotation)); //aliceModel, trackElement));
+                        //StartCoroutine(lines.DrawLines(andyObject, hit.Pose.position, prefab, hit.Pose.rotation)); //aliceModel, trackElement));
                     }
                 }
             }
