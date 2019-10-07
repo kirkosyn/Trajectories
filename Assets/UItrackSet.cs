@@ -24,7 +24,7 @@ public class UItrackSet : MonoBehaviour
     public Text theta;
     public Text phi;
 
-    static GameObject[] childGameObjects;
+    public static GameObject[] childGameObjects;
     static Data data;
     public int index;
 

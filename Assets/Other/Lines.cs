@@ -34,7 +34,7 @@ public class Lines : MonoBehaviour
 
         reduction = 500 / img_height / img_width;
 
-        LoadResources(gameObject, prefab, pose);
+        LoadResources(gameObject, prefab, pose, reduction);
 
         for (int i = 0; i < maxVal; i++)
         {
@@ -84,10 +84,10 @@ public class Lines : MonoBehaviour
     }
 
     //załadowanie danych o śladach
-    private void LoadResources(GameObject gameObject, GameObject prefab, Vector3 pose)
+    private void LoadResources(GameObject gameObject, GameObject prefab, Vector3 pose, float reduction)
     {
         data.LoadFile();
-        data.SetTheParams(pose);
+        data.SetTheParams(pose, reduction);
         length = data.trackIterators.Count;
         maxVal = data.maxVal;
         tracksParamsList = data.tracksParamsList;

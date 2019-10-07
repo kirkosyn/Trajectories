@@ -51,13 +51,17 @@ namespace GoogleARCore.Examples.AugmentedImage
         public GameObject FitToScanOverlay;
 
         private Lines lines;
-        private bool isHit = false;
+        public static bool isHit = false;
         private Dictionary<string, int> values;
 
-        private Dictionary<int, AugmentedImageVisualizer> m_Visualizers
+        public static Dictionary<int, AugmentedImageVisualizer> m_Visualizers
             = new Dictionary<int, AugmentedImageVisualizer>();
+        public static AugmentedImageVisualizer visualizer;
+        public static List<AugmentedImage> m_TempAugmentedImages = new List<AugmentedImage>();
 
-        private List<AugmentedImage> m_TempAugmentedImages = new List<AugmentedImage>();
+        public static GameObject simulation;
+        public static Anchor anchor;
+
         public void Start()
         {
             lines = new Lines();
@@ -111,15 +115,15 @@ namespace GoogleARCore.Examples.AugmentedImage
             {
                 foreach (var image in m_TempAugmentedImages)
                 {
-                    AugmentedImageVisualizer visualizer = null;
+                    visualizer = null;
                     m_Visualizers.TryGetValue(image.DatabaseIndex, out visualizer);
 
                     if (image.TrackingState == TrackingState.Tracking && visualizer == null)
                     {
                         // Create an anchor to ensure that ARCore keeps tracking this augmented image.
-                        Anchor anchor = image.CreateAnchor(image.CenterPose);
+                        anchor = image.CreateAnchor(image.CenterPose);
 
-                        GameObject simulation = new GameObject();
+                        simulation = new GameObject();
                         simulation.transform.parent = anchor.transform;
 
                         //visualizer = (AugmentedImageVisualizer)Instantiate(
@@ -127,15 +131,12 @@ namespace GoogleARCore.Examples.AugmentedImage
                         visualizer = new AugmentedImageVisualizer();
                         visualizer.Image = image;
                         m_Visualizers.Add(image.DatabaseIndex, visualizer);
-                        
+
                         values[image.Name]++;
-
-                        Debug.Log("width " + image.ExtentX);
-                        Debug.Log("height " + image.ExtentZ);
-
+                        
                         if (!isHit)
                         {
-                            StartCoroutine(lines.DrawLines(simulation, anchor.transform.position, new GameObject(), 
+                            StartCoroutine(lines.DrawLines(simulation, anchor.transform.position, new GameObject(),
                                            anchor.transform.rotation, image.ExtentX, image.ExtentZ));
                             isHit = true;
                         }

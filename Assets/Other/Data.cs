@@ -109,7 +109,7 @@ public class Data
     public float momentumValue;
     public FTrack fTrack;
     public Color32 color;
-    public readonly int reduction = 500;
+    public float reduction;
     public Vector3 nextPose;
     public Vector3 shift;
     public int maxVal;
@@ -131,11 +131,12 @@ public class Data
     }
 
     //ustawienie parametrów śladów
-    public void SetTheParams(Vector3 pose)
+    public void SetTheParams(Vector3 pose, float reduction)
     {
         int minVal;
         listOfMomentums = new List<Momentums>();
         length = tracksList.fTracks.Length;
+        this.reduction = reduction;
 
         tracksParamsList = new TracksParamsList()
         {
@@ -202,7 +203,7 @@ public class Data
 
         for (int i = 0; i < length; i++)
         {
-            colors[i] = new Color32(current, 0, 0, 255);
+            colors[i] = new Color32(0, current, 245, 255);
             current = System.Convert.ToByte(System.Convert.ToInt32(current) + step);
         }
     }
